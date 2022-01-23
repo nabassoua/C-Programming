@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
   int heures,minutes,secondes;
   
   x1=1.2345,x2=123.45,x3=0.000012345,x4=1e-10,x5=-123.4568e15;
-  x6=12.34567,x7=1.234567,x8=1234567,x9=123456.7,x10=0.1234567,x11=1234.567;
+  x6=12.34567f,x7=1.234567f,x8=1234567,x9=123456.7f,x10=0.1234567f,x11=1234.567f;
   x12=12345678;
 
   /*Exo1: uTILISATION DE GETCHAR()*/
@@ -85,8 +85,8 @@ int main(int argc, char *argv[])
   /*warning:format ‘%d’ expects argument of type ‘int’, 
     but argument 2 has type ‘double’ [-Wformat=]*/
   
-  /*Affichage avec modulo d: x12=619796080*/
-  /*le float 12345678 est alors converti en int a cause de modulo d ce qui done 619796080*/
+  /*Affichage avec modulo d: x12=-1691666832*/
+  /*le float 12345678 est alors converti en int a cause de modulo d ce qui donne -1691666832*/
 
   printf("Affichage avec modulo f: \n");
   printf("x12=%f\n",x12);
