@@ -5,16 +5,22 @@
 
 int main(int argc, char *argv[]){
 
-  char c;
+  /*ASCII sont compris entre 0 et 255 alors que signed char est limite 
+   *aux valeurs entre -128 et 127*/
+  
+  unsigned char c; /*ne pas utiliser 'char c'*/
+  
   int b;
   unsigned int x1,x2;
   signed int x3,x4;
   short x5,x6,sum;
+  float x7;
 
   x1=12;
   x2=4294967284;
   x3=12;
   x4=4294967284;
+  x7=0.1f;
   
   /*Exo1: ASCII*/
 
@@ -85,6 +91,9 @@ int main(int argc, char *argv[]){
   /*OUTPUT:
     -4 en decimal est -4, en octal 37777777774 et hexadecimal fffffffc */
 
+  /*Les formats octal et hexadecimal permettent d'afficher seulement des
+   *valeurs non-signees*/
+
   /*FIN Exo 3*/
 
   /*Exo 4 addition de short*/
@@ -107,6 +116,38 @@ int main(int argc, char *argv[]){
 
   /*Resultat incorrect car le resultat correct 37000 est trop grand pour un short
     Le max pour un short (signed) est 32767*/
+
+  /*Fin Exo 4*/
+
+  /*Exo 5: Reels */
+
+  printf("Affichage de x7 avec 1 chiffre apres la virgule: ");
+  printf("x7=%.1f \n",x7);
+
+  printf("Affichage de x7 avec 10 chiffre apres la virgule: ");
+  printf("x7=%.10f \n",x7);
+
+  /*OUTPUT:
+    Affichage de x7 avec 1 chiffre apres la virgule: x7=0.1 
+    Affichage de x7 avec 10 chiffre apres la virgule: x7=0.1000000015 */
+
+  /*Fin Exo 5*/
+
+  /*Exo 6: Operations sur les reels*/
+
+  printf("Le resultat de (1e-9+1e9)-1e9 est: ");
+  printf("%.10f \n",(1e-9+1e9)-1e9);
+
+  printf("Le resultat de 1e-9+(1e9-1e9) est: ");
+  printf("%.10f \n",1e-9+(1e9-1e9));
+
+  /*OUTPUT:
+    Le resultat de (1e-9+1e9)-1e9 est: 0.0000000000 
+    Le resultat de 1e-9+(1e9-1e9) est: 0.0000000010 */
+
+
+  /*Fin Exo 6*/
+
   
   return EXIT_SUCCESS;
 }
