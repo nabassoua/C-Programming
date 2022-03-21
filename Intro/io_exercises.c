@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
   
   x1=1.2345,x2=123.45,x3=0.000012345,x4=1e-10,x5=-123.4568e15;
   x6=12.34567f,x7=1.234567f,x8=1234567,x9=123456.7f,x10=0.1234567f,x11=1234.567f;
-  x12=12345678;
+  x12=1234.5678f;
 
   /*Exo1: uTILISATION DE GETCHAR()*/
   
@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
 
   /*FIN Exo 3*/
 
-  /*Exo 4: affichage avec 3 formats differents du float 12345678*/
+  /*Exo 4: affichage avec 3 formats differents du float 1234.5678*/
 
   printf("Affichage avec modulo d: \n");
   printf("x12=%d\n",x12);
@@ -85,18 +85,18 @@ int main(int argc, char *argv[])
   /*warning:format ‘%d’ expects argument of type ‘int’, 
     but argument 2 has type ‘double’ [-Wformat=]*/
   
-  /*Affichage avec modulo d: x12=-1691666832*/
-  /*le float 12345678 est alors converti en int a cause de modulo d ce qui donne -1691666832*/
+  /*Affichage avec modulo d: x12=858953328*/
+  /*le float 1234.5678 est alors converti en int a cause de modulo d*/
 
   printf("Affichage avec modulo f: \n");
   printf("x12=%f\n",x12);
 
-  /*Affichage avec modulo f: x12=12345678.000000 */
+  /*Affichage avec modulo f: x12=1234.567749*/
 
   printf("Affichage avec modulo e: \n");
   printf("x12=%e\n",x12);
 
-  /*Affichage avec modulo e: x12=1.234568e+07*/
+  /*Affichage avec modulo e: x12=1.234568e+03*/
 
   /*Fin Exo 4*/
 

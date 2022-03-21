@@ -54,7 +54,7 @@ int main(int argc, char *argv[]){
   */
 
   printf("Au format entier signe:\n");
-  printf("12 et 4294967284 en entiers  signes sont %d et %d \n",x3, x4);
+  printf("12 et 4294967284 en entiers non signes sont %d et %d \n",x3, x4);
 
   /*OUTPUT:
     Au format entier signe:
@@ -65,13 +65,13 @@ int main(int argc, char *argv[]){
    l'affichage -12 qui n'est pas correct*/
 
   printf("Affichage de constantes: \n");
-  printf("12 et 4294967284 en entier naturel hexadecimal sont %x et %lx \n",12,4294967284);
+  printf("12 et 4294967284 en entier naturel hexadecimal sont %x et %x \n",12,4294967284);
 
   /*OUTPUT:
     Affichage de constantes: 
     12 et 4294967284 en entier naturel hexadecimal sont c et fffffff4 */
 
-  printf("12 et 4294967284 en entiers non-signes sont %u et %u \n",12U,4294967284U);
+  printf("12 et 4294967284 en entiers non-signes sont %u et %u \n",12,4294967284);
 
   /*OUTPUT:
     12 et 4294967284 en entiers non-signes sont 12 et 4294967284 */
