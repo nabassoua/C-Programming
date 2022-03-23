@@ -5,8 +5,6 @@
 
 short a, b, c;
 char ca;
-int num1, num2;
-
 
 int main(int argc, char *argv[]){
 
@@ -39,27 +37,10 @@ int main(int argc, char *argv[]){
 
   printf("Entrez le caractere a traiter: ");
   scanf("%ca", &ca);
-  if('A' <= ca && ca <= 'Z'){
+  if('A' <= ca <= 'Z'){
     printf("Majiscule....converti a la minisucle \n");
-    ca = ca +('a'-'A');
   }
   printf("Caractere apres le traitement: %c \n", ca);
-
-  /*division entiere*/
-  printf("Entrez le premier operande: ");
-  scanf("%d",&num1);
-  printf("Entrez le deuxieme operande: ");
-  scanf("%d",&num2);
-  printf("%d = %d * %d + %d \n", num1, num2, num1/num2, num1 % num2);
-  /* ---- 17 = 5 * 3 + 2 -----*/
-
-  /*division relle*/
-  printf("Entrez le premier operande: ");
-  scanf("%d",&num1);
-  printf("Entrez le deuxieme operande: ");
-  scanf("%d",&num2);
-  printf("%d/%d = %f \n", num1, num2, (float)num1/num2);
-  /* ---- 10/4 = 2.500000 -----*/
   
   return EXIT_SUCCESS;
 
