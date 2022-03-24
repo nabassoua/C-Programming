@@ -6,14 +6,14 @@
 short a, b, c;
 char ca;
 int num1, num2;
-int x,y;
-float u,v;
+
 
 int main(int argc, char *argv[]){
 
   short d, e, f;
   
-
+  int x,y;
+  float u,v;
   x=5,y=15;
   u=2.1,v=5.0;
 
@@ -95,7 +95,7 @@ int main(int argc, char *argv[]){
     x : 7
     x=(7!=8) : 1
     x= : 1
-    (float)x : 1229197920
+    (float)x : -302833056 
 
   */
 
