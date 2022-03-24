@@ -6,11 +6,16 @@
 short a, b, c;
 char ca;
 int num1, num2;
-
+int x,y;
+float u,v;
 
 int main(int argc, char *argv[]){
 
   short d, e, f;
+  
+
+  x=5,y=15;
+  u=2.1,v=5.0;
 
   printf("Addresses de a, b et c declarees hors de main(): \n");
   printf("&a:%p \t &b:%p \t &c:%p \n", &a, &b, &c);
@@ -19,7 +24,7 @@ int main(int argc, char *argv[]){
   printf("&d:%p \t &e:%p \t &f:%p \n", &d, &e, &f);
 
   printf("Addresses de g, h et i declarees dans  fonction(): \n");
-  fonction();
+  fonction1();
   
   short g, h, i;
   printf("Addresses de g, h et i declarees dans main(): \n");
@@ -60,13 +65,47 @@ int main(int argc, char *argv[]){
   scanf("%d",&num2);
   printf("%d/%d = %f \n", num1, num2, (float)num1/num2);
   /* ---- 10/4 = 2.500000 -----*/
+
+  /*Boolean expressions*/
+
+  printf("x==x : %d\n",x==x);
+  printf("x==y : %d\n",x==y);
+  printf("x==u : %d\n",x==u);
+  printf("x==v : %d\n",x==v);
+  printf("x>4 || x<3 : %d\n",x>4 || x<3);
+  printf("x>4 && x<3 : %d\n",x>4 && x<3);
+  if(x)
+    printf("(x):vrai \n");
+  else
+    printf("(x):faux \n");
+  printf("x=7 : %d\n",x=7);
+  printf("x : %d\n",x);
+  printf("x=(7!=8) : %d\n",x=(7!=8));
+  printf("x= : %d\n",x);
+  printf("(float)x : %d\n",(float)x);
+
+  /*x==x : 1
+    x==y : 0
+    x==u : 0
+    x==v : 1
+    x>4 || x<3 : 1
+    x>4 && x<3 : 0
+    (x):vrai 
+    x=7 : 7
+    x : 7
+    x=(7!=8) : 1
+    x= : 1
+    (float)x : 1229197920
+
+  */
+
   
-  return EXIT_SUCCESS;
+return EXIT_SUCCESS;
 
 }
    
 
-void fonction()
+void fonction1()
 {
   short g, h, i;
   printf("&g:%p \t &h:%p \t &i:%p \n", &g, &h, &i);
