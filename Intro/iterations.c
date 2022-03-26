@@ -9,24 +9,47 @@ int main(int argc, char *argv[]){
   scanf("%d:%d:%d",&a,&b,&c);
   printf("\n");
 
-  if(a>b){
-    if(b>c){
+  if(a>b && b>c){ 
       printf("Le plus grand des entiers est %d.\n",a);
-    }
   }
-  else if(b>a){
-    if(a>c){
+  else if(a>c && c>b){  
+      printf("Le plus grand des entiers est %d.\n",a);
+  }
+  else if(b>a && a>c){  
       printf("Le plus grand des entiers est %d.\n",b);
-    }
   }
-  else if(c>a){
-    if(a>b){
+  else if(b>c && c>a){ 
+      printf("Le plus grand des entiers est %d.\n",b);
+  }
+  else if(c>a && a>b){   
       printf("Le plus grand des entiers est %d.\n",c);
-    }
   }
-  else if((a==b) && (b==c)){
-     printf("Le plus grand des entiers est %d.\n",a);
+  else if(c>b && b>a){   
+      printf("Le plus grand des entiers est %d.\n",c);    
   }
+  else if(a==b && b>c){   
+      printf("Le plus grand des entiers est %d.\n",a);   
+  }
+  else if(b==c && c>a){   
+      printf("Le plus grand des entiers est %d.\n",b);
+  }
+  else if(c==a && a>b){   
+      printf("Le plus grand des entiers est %d.\n",c);
+  }
+  else if(a==b && b<c){   
+      printf("Le plus grand des entiers est %d.\n",c);   
+  }
+  else if(b==c && c<a){   
+      printf("Le plus grand des entiers est %d.\n",a);
+  }
+  else if(c==a && a<b){   
+      printf("Le plus grand des entiers est %d.\n",b);
+  }
+  else if(a==b && a==c){
+      printf("Le plus grand des entiers est %d.\n",a);
+  }
+  
 
   return EXIT_SUCCESS;
+  
 }
