@@ -59,20 +59,20 @@ int main(int argc, char *argv[]){
   printf("l = ");
   scanf("%f",&l);
   
-  delta = sqrt(k*k - (4*j*l));
+  delta = k*k - (4*j*l);
   
   if(delta<0){
     printf("L'equation %.2fx^2 + %.2fx + %.2f = 0 n'admet pas de solution \n",j,k,l);
   }
   else if(delta==0){
     printf("L'equation %.2fx^2 + %.2fx + %.2f = 0 admet exactement une solution : \n",j,k,l);
-    x = (-k)/(2*j);
+    x = -k/j;
     printf("%f \n",x);
   }
   else if (delta>0){
     printf("L'equation %.2fx^2 + %.2fx + %.2f = 0 admet deux solutions : \n",j,k,l);
-    x1 = (-k + delta)/(2*j);
-    x2 = (-k - delta)/(2*j);
+    x1 = (-k + sqrt(delta))/(2*j);
+    x2 = (-k - sqrt(delta))/(2*j);
     printf("x1 = %f et x2 = %f . \n",x1,x2);
   }
   
