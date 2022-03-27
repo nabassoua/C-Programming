@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main(int argc, char *argv[]){
 
   int a, b, c;
+  float j, k, l, delta, x, x1, x2;
 
   printf("Entrez les valeurs de a, b,c (sous la forme a:b:c) : ");
   scanf("%d:%d:%d",&a,&b,&c);
@@ -48,8 +50,27 @@ int main(int argc, char *argv[]){
   else if(a==b && a==c){
       printf("Le plus grand des entiers est %d.\n",a);
   }
-  
 
+  printf("Entez les valeurs des coefficients j,f, et k du trinome (j doit etre non nulle). \n"); 
+  scanf("%f%f%f",&j,&k,&l);
+  printf("j = %.1f \n k = %.1f \n l = %.1f \n", j,k,l);
+  delta = sqrt(k*k - (4*j*l));
+  
+  if(delta<0){
+    printf("L'equation %.2fx^2 + %.2fx + %.2f = 0 n'admet pas de solution \n",j,k,l);
+  }
+  else if(delta==0){
+    printf("L'equation %.2fx^2 + %.2fx + %.2f = 0 admet exactement une solution : \n",j,k,l);
+    x = (-k)/(2*j);
+    printf("%f \n",x);
+  }
+  else if (delta>0){
+    printf("L'equation %.2fx^2 + %.2fx + %.2f = 0 admet deux solutions : \n",j,k,l);
+    x1 = (-k + sqrt(delta))/(2*j);
+    x2 = (-k - sqrt(delta))/(2*j);
+    printf("x1 = %f et x2 = %f . \n",x1,x2);
+  }
+  
   return EXIT_SUCCESS;
   
 }
