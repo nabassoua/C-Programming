@@ -1,15 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX 100
 
 
 int main(int argc, char *argv[]){
 
-  char chaine1[MAX],chaine2[MAX];
-  /*int i,j;*/
+  char chaine1[5],chaine2[5];
   int i;
-  char temp;
-    
+ 
 
   printf("La chaine 1 est : ");
   scanf("%s",chaine1);
@@ -18,38 +15,30 @@ int main(int argc, char *argv[]){
   printf("La chaine 2 est : ");
   scanf("%s",chaine2);
 
-  temp=chaine1[0];
-    
+  i=0;
 
-  for(i=0;i<MAX;i++){
-        
-      if(chaine2[i]<temp){
-	temp=chaine2[i];
-	/*printf("%s < %s \n",chaine1,chaine2);*/
-      }
+  while(chaine1[i]==chaine2[i] && chaine1[i]!='\0'){
+    i++;
+  }
+
+  printf("Resultat: ");
+    
+  if(chaine1[i]>chaine2[i]){
+    printf("%s < %s \n",chaine1,chaine2);
+  }
       
-      else if(chaine2[i]>temp){
+  else if(chaine1[i]<chaine2[i]){
 	
-	printf("%s > %s \n",chaine1,chaine2);
-      }
-	
-      else{
-	printf("%s > %s \n",chaine1,chaine2);
-      }	
-    
+    printf("%s < %s \n",chaine1,chaine2);
   }
+	
+  else{
+      printf("%s = %s \n",chaine1,chaine2);
+  }	
+    
 
-  for(i=0;i<MAX1;i++){
-    if(chaine1[i]==chaine2[i]){
-      printf("%s == %s \n",chaine1,chaine2);
-    }
-  }
-    
-  /*
-   
-  */
 
   
-  return EXIT_SUCCESS;
+return EXIT_SUCCESS;
 
 }
