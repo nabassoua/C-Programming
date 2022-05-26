@@ -51,51 +51,41 @@ void affiche_triangle2(int cote, char car, int direction){
   }
 }
 
-void affiche_grand_triangle(int cote, char car, int direction){
+void affiche_grand_triangle(int cote, char car){
 
-  if(direction==0){
-    affiche_triangle2(cote,car,direction);
-  }
-
+  affiche_triangle2(cote,car,0);
+  affiche_triangle2(cote-1,car,1);
+  
 }
 
 void affiche_ligne2(int n1, int n2, char car){
 
-  int i,j;
+  int i;
   for(i=0;i<n1;i++){
     printf("  ");
   }
-  for(j=0;j<n2;j++){
-    printf("%c ",car);
-  }
-  printf("\n");
-
-}
-
-void affiche_croix(int cote, char car){
-
-  //int i;
-  int n1=2*cote-1;
-  int n2=2*cote-1;
-  affiche_ligne2(n1,n2,car);
+  affiche_ligne(n2,car);
   
+
 }
+
+
 
 int main(int argc, char *argv[]){
 
   //int n=5;
   //char car = '*';
   //int direction = 0;
-  //int n1=8;
-  //int n2=2;
-  int car='*';
+  int n1=3;
+  int n2=4;
+  char car='*';
   // affiche_ligne(n,car);
   //affiche_carre(n,car);
   //affiche_triangle(n,car);
   //affiche_triangle2(n,car,direction);
-  //affiche_grand_triangle(n,car,direction);
-  //affiche_ligne2(n1,n2,car);
-  affiche_croix(5,car);
+  //affiche_grand_triangle(n,car);
+  affiche_ligne2(n1,n2,car);
+  //affiche_croix(5,car);
   return EXIT_SUCCESS;
 
  
